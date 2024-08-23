@@ -48,22 +48,7 @@ class _PlacesState extends ConsumerState<Places> {
           future: _PlacesFuture,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const CircularProgressIndicator();
-              // return Shimmer.fromColors(
-              //   baseColor: Colors.grey.shade300,
-              //   highlightColor: Colors.grey.shade100,
-              //   enabled: true,
-              //   child: ListView.builder(
-              //     itemBuilder: (context, index) => Row(
-              //       children: [
-              //         const CircleAvatar(
-              //           radius: 26,
-              //         ),
-              //         ],
-              //     ),
-              //     itemCount: 20,
-              //   ),
-              // );
+              return const Center(child: CircularProgressIndicator());
             } else {
               return PlacesList(
                 places: userPlaces,
