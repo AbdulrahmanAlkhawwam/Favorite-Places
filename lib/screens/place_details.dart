@@ -3,10 +3,11 @@ import 'package:acodemind05/models/place.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/user_places.dart';
+
 const key = 'a8tEGEVLa2SfcwqoOUTndsMsbafmrGTA';
 
 class PlaceDetail extends ConsumerWidget {
-  PlaceDetail({required this.place});
+  const PlaceDetail({super.key, required this.place});
 
   final Place place;
 
@@ -21,7 +22,7 @@ class PlaceDetail extends ConsumerWidget {
         title: Text(place.title),
         actions: [
           IconButton(
-            onPressed: (){
+            onPressed: () {
               ref.read(userPlacesProvider.notifier).deletePlace(place);
               Navigator.of(context).pop();
             },
@@ -87,7 +88,7 @@ class PlaceDetail extends ConsumerWidget {
                     textAlign: TextAlign.center,
                     place.location.address ?? "place location address",
                     style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Theme.of(context).colorScheme.onBackground,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                   ),
                 )

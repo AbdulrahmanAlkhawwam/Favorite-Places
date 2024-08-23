@@ -22,9 +22,13 @@ Future<Database> _getDatabase() async {
 class UserPlacesNotifier extends StateNotifier<List<Place>> {
   UserPlacesNotifier() : super(const []);
 
-  Future<void> deletePlace (Place place) async {
+  Future<void> deletePlace(Place place) async {
     final db = await _getDatabase();
-    await db.delete('user_places',where: "id = ?", whereArgs: [place.id]);
+    await db.delete(
+      'user_places',
+      where: "id = ?",
+      whereArgs: [place.id],
+    );
     loadPlaces();
   }
 

@@ -14,7 +14,7 @@ class PlacesList extends StatelessWidget {
         child: Text(
           'No places added yet',
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
         ),
       );
@@ -30,14 +30,14 @@ class PlacesList extends StatelessWidget {
         title: Text(
           places[index].title,
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
         ),
         subtitle: Text(
           maxLines: 1,
           places[index].location.address ?? "Location address",
           style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
                 overflow: TextOverflow.ellipsis,
               ),
         ),

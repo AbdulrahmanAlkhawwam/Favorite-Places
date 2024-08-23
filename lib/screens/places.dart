@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:acodemind05/providers/user_places.dart';
 import 'package:acodemind05/widgets/places_list.dart';
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 import 'add_places.dart';
 
 class Places extends ConsumerStatefulWidget {
@@ -10,13 +9,11 @@ class Places extends ConsumerStatefulWidget {
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() {
-  return _PlacesState();
+    return _PlacesState();
   }
-
-
 }
-class _PlacesState extends ConsumerState<Places>{
 
+class _PlacesState extends ConsumerState<Places> {
   late Future<void> _PlacesFuture;
 
   @override

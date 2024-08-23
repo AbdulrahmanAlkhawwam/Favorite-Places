@@ -99,7 +99,7 @@ class _MapScreenState extends State<MapScreen> {
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: Theme.of(context).colorScheme.background,
+                  backgroundColor: Theme.of(context).colorScheme.surface,
                   child: IconButton(
                     onPressed: () async {
                       await controller.zoomIn();
@@ -110,7 +110,7 @@ class _MapScreenState extends State<MapScreen> {
                 const SizedBox(height: 15),
                 CircleAvatar(
                   radius: 25,
-                  backgroundColor: Theme.of(context).colorScheme.background,
+                  backgroundColor: Theme.of(context).colorScheme.surface,
                   child: IconButton(
                     icon: const Icon(Icons.remove),
                     onPressed: () async {

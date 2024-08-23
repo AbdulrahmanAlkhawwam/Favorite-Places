@@ -29,14 +29,14 @@ class _AddPlaceScreenState extends ConsumerState<AddPlace> {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         duration: const Duration(milliseconds: 1500),
         backgroundColor: Theme.of(context).colorScheme.primary,
-        content: const Text(
-            'you should full all Field !'),
+        content: const Text('you should full all Field !'),
       ));
       return;
     }
 
-    ref.read(userPlacesProvider.notifier).addPlace(
-        enteredTitle, _selectedImage!, _selectedLocation!);
+    ref
+        .read(userPlacesProvider.notifier)
+        .addPlace(enteredTitle, _selectedImage!, _selectedLocation!);
 
     Navigator.of(context).pop();
   }
@@ -61,7 +61,7 @@ class _AddPlaceScreenState extends ConsumerState<AddPlace> {
               decoration: const InputDecoration(labelText: 'Title'),
               controller: _titleController,
               style: TextStyle(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.onSurface,
               ),
             ),
             const SizedBox(height: 10),
